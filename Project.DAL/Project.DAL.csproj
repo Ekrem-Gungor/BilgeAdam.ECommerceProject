@@ -16,12 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Users\Ekrem\Downloads\BilgeAdam.ECommerceProject-master\Project.ENTITIES\Project.ENTITIES.csproj" />
     <ProjectReference Include="..\Project.CONF\Project.CONF.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Repository\Abstracts\" />
-    <Folder Include="Repository\Concretes\" />
   </ItemGroup>
 
 </Project>

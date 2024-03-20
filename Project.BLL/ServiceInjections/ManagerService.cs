@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.ENTİTİES.Enums
+namespace Project.BLL.ServiceInjections
 {
-    public enum DataStatus
+    public static class ManagerService
     {
-        Inserted = 1, Updated = 2, Deleted = 3
     }
 }
