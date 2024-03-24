@@ -104,9 +104,13 @@ namespace Project.BLL.Managers.Concretes
 
         public string DestroyRange(List<T> list)
         {
-            foreach (T item in list) return Destroy(item);
-
-            return "Silme işleminde bir sorunla karsılasıldı lütfen veri durumunun pasif oldugundan emin olunuz";
+            StringBuilder result = new StringBuilder();
+            foreach (T item in list)
+            {
+                string message = Destroy(item);
+                result.AppendLine(message);
+            }
+            return result.ToString();
         }
 
         public async Task<T> FindAsync(int id)
