@@ -12,7 +12,7 @@ namespace Project.BLL.ServiceInjections
 {
     public static class CustomIdentityService
     {
-        public static IServiceCollection AddIdentityService(this IServiceCollection services)
+        public static IServiceCollection AddIdentityServices(this IServiceCollection services)
         {
             services.AddIdentity<AppUser, IdentityRole<int>>(x =>
             {

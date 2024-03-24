@@ -16,8 +16,8 @@ namespace Project.DAL.Repository.Abstracts
 
         //Todo: GetActivesAsync
         Task<List<T>> GetActivesAsync();
-        List<T> GetPassive();
-        List<T> GetModified();
+        List<T> GetPassives();
+        List<T> GetModifieds();
 
         //Modify Command
         void Add(T item);

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Project.BLL.Managers.Abstracts;
+using Project.BLL.Managers.Concretes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +11,17 @@ namespace Project.BLL.ServiceInjections
 {
     public static class ManagerService
     {
+        public static IServiceCollection AddManagerServices(this IServiceCollection services)
+        {
+            services.AddScoped(typeof(IManager<>), typeof(BaseManager<>));
+
+            services.AddScoped<IProductManager, ProductManager>();
+            services.AddScoped<ICategoryManager, CategoryManager>();
+            services.AddScoped<IAppUserManager, AppUserManager>();
+            services.AddScoped<IProfileManager, ProfileManager>();
+            services.AddScoped<IOrderDetailManager, OrderDetailManager>();
+            services.AddScoped<IOrderManager, OrderManager>();
+            return services;
+        }
     }
 }
