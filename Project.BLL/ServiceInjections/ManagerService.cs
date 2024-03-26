@@ -21,6 +21,7 @@ namespace Project.BLL.ServiceInjections
             services.AddScoped<IProfileManager, ProfileManager>();
             services.AddScoped<IOrderDetailManager, OrderDetailManager>();
             services.AddScoped<IOrderManager, OrderManager>();
+            services.AddScoped<IShipperManager, ShipperManager>();
             return services;
         }
     }

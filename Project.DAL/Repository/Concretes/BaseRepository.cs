@@ -121,12 +121,12 @@ namespace Project.DAL.Repository.Concretes
             return _db.Set<T>().OrderByDescending(x => x.CreatedDate).Take(count).ToList();
         }
 
-        public List<T> GetModified()
+        public List<T> GetModifieds()
         {
             return Where(x => x.Status == ENTITIES.Enums.DataStatus.Updated);
         }
 
-        public List<T> GetPassive()
+        public List<T> GetPassives()
         {
             return Where(x => x.Status == ENTITIES.Enums.DataStatus.Deleted);
         }

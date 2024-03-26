@@ -28,6 +28,7 @@ namespace Project.DAL.ContextClasses
             builder.ApplyConfiguration(new ProductConfiguration());
             builder.ApplyConfiguration(new OrderConfiguration());
             builder.ApplyConfiguration(new OrderDetailConfiguration());
+            builder.ApplyConfiguration(new ShipperConfiguration());
             CategoryDataSeedExtension.SeedCatgories(builder);
             ProductDataSeedExtension.SeedProducts(builder);
             UserRoleDataSeedExtension.SeedUsers(builder);
@@ -39,6 +40,7 @@ namespace Project.DAL.ContextClasses
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Shipper> Shippers { get; set; }
 
     }
 }
